@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: "Archivo";
+  src: url('/src/assets/font/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Archivo-Italic";
+  src: url('/src/assets/font/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@for $i from 20 through 90 {
+  @font-face {
+    font-family: "Archivo #{$i * 10}";
+    font-weight: #{$i * 10};
+    src: url('/src/assets/font/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: "Archivo-Italic #{$i * 10}";
+    font-weight: #{$i * 10};
+    src: url('/src/assets/font/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  }
+}

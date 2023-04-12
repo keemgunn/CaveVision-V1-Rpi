@@ -1,0 +1,53 @@
+/* #/styles/typography/_basics.scss */
+
+body {
+  // NORMALIZE FONT SIZE
+  font-size: 16rem;
+
+  // FONTS 
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  // NORMALIZE TEXT SIZE DIFFERENCE BY DIVICES
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust : 100%;
+  -moz-text-size-adjust : 100%;
+  -o-text-size-adjust : 100%;
+
+  // TEXT RENDERING 
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision !important; //more fatty in safari
+}
+
+
+p {
+  margin: 0; padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.--italic {
+  font-style: italic;
+}
+.--center {
+  text-align: center;
+}
+.--right {
+  text-align: right;
+}
+.--caps {
+  text-transform: uppercase;
+}
+

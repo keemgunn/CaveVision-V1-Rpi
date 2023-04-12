@@ -1,0 +1,120 @@
+/* @/configs/ui/_typography.scss */
+@import "@/styles/typography/_mixins.scss";
+
+@import "@/assets/font/_Archivo.scss";
+@import "@/assets/font/_Inter.scss";
+@import "@/assets/font/_JetBrainsMono.scss";
+
+
+
+
+@for $i from 32 through 100 {
+  @include Header(
+    "FAMILY", "Archivo", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 4), 
+    "LETTERSPACE_SIGN", "-", 
+    "LETTERSPACE", 1, 
+    "regular", 600, 
+    "--light", 400, 
+    "--bold", 800);
+}
+@for $i from 24 through 31 {
+  @include Header(
+    "FAMILY", "Archivo", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 4), 
+    "LETTERSPACE_SIGN", "-", 
+    "LETTERSPACE", 0.5, 
+    "regular", 600, 
+    "--light", 400, 
+    "--bold", 800);
+}
+@for $i from 16 through 23 {
+  @include Header(
+    "FAMILY", "Archivo", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 4), 
+    "LETTERSPACE_SIGN", "-", 
+    "LETTERSPACE", 0, 
+    "regular", 600, 
+    "--light", 400, 
+    "--bold", 800);
+}
+@for $i from 16 through 100 {
+  .typo-header-#{$i}, 
+  .typo-header-#{$i}--bold, 
+  .typo-header-#{$i}--light {
+    font-variation-settings:
+      'wdth' 120;
+  }
+}
+
+
+
+
+@for $i from 8 through 48 {
+  @include Body(
+    "FAMILY", "Inter", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 6), 
+    "LETTERSPACE_SIGN", "", 
+    "LETTERSPACE", 0, 
+    "regular", 480, 
+    "--light", 340, 
+    "--bold", 620);
+
+  .typo-body-#{$i}, 
+  .typo-body-#{$i}--bold, 
+  .typo-body-#{$i}--light {
+    word-wrap:break-word;
+    word-break: keep-all;
+  }
+}
+
+
+
+
+@for $i from 8 through 48 {
+  @include Caption(
+    "FAMILY", "JetBrainsMono", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 4), 
+    "LETTERSPACE_SIGN", "", 
+    "LETTERSPACE", 1.0, 
+    "regular", 400, 
+    "--light", 240, 
+    "--bold", 720);
+
+    .typo-caption-#{$i}, 
+    .typo-caption-#{$i}--bold, 
+    .typo-caption-#{$i}--light {
+      // @include noSelect();
+      word-wrap:break-word;
+      word-break: keep-all;
+    }
+}
+
+
+
+
+@for $i from 10 through 48 {
+  @include Mark(
+    "FAMILY", "Archivo", 
+    "SIZE", $i, 
+    "LINE_HEIGHT", ($i + 4), 
+    "LETTERSPACE_SIGN", "", 
+    "LETTERSPACE", 3.0, 
+    "regular", 500, 
+    "--light", 270, 
+    "--bold", 620, 
+    "--heavy", 820);
+
+  .typo-mark-#{$i}, .typo-mark-#{$i}--bold, .typo-mark-#{$i}--light, .typo-mark-#{$i}--heavy {
+    font-variation-settings:
+      'wdth' 114;
+    @include noSelect();
+    word-wrap:break-word;
+    word-break: break-all;
+  }
+}

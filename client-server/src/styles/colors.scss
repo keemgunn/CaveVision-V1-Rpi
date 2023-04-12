@@ -1,0 +1,112 @@
+/* @/configs/ui/_colors.scss */
+
+.theme--default-light {
+  --Primary: #4F8C5C;
+  --OnPrimary: #E8F2EA;
+  --PrimaryContainer: #D0E5D5;
+  --OnPrimaryContainer: #27462E;
+  --Secondary: #836A57;
+  --OnSecondary: #F0ECE9;
+  --SecondaryContainer: #E2D9D3;
+  --OnSecondaryContainer: #42352C;
+  --Tertiary: #51888A;
+  --OnTertiary: #E8F1F2;
+  --TertiaryContainer: #D1E3E4;
+  --OnTertiaryContainer: #284445;
+  --Surface: #FFFFFF;
+  --OnSurface: #0D170F;
+  --SurfaceVariant: #F5F4E4;
+  --OnSurfaceVariant: #1B190A;
+  --Background: #EDEDED;
+  --OnBackground: #121212;
+}
+.theme--default-dark {
+  --Primary: #5CA36B;
+  --OnPrimary: #1A2F1F;
+  --PrimaryContainer: #27462E;
+  --OnPrimaryContainer: #D0E5D5;
+  --Secondary: #A88E7C;
+  --OnSecondary: #2C231D;
+  --SecondaryContainer: #42352C;
+  --OnSecondaryContainer: #E2D9D3;
+  --Tertiary: #8CBABC;
+  --OnTertiary: #1B2D2E;
+  --TertiaryContainer: #284445;
+  --OnTertiaryContainer: #D1E3E4;
+  --Surface: #121212;
+  --OnSurface: #E8F2EA;
+  --SurfaceVariant: #1B190A;
+  --OnSurfaceVariant: #EBE9CA;
+  --Background: #000000;
+  --OnBackground: #DBDBDB;
+}
+
+
+// SYSTEM COLORS =====================
+
+.scheme--light {
+  --Ink: #000000;
+  --Base: #ffffff;
+  --Error: #DF1125;
+  --OnError: #FFF0F0;
+  --ErrorContainer: #F7B9BC;
+  --OnErrorContainer: #AF0C1F;
+  --Warning: #E6B644;
+  --OnWarning: #FFFDF2;
+  --WarningContainer: #FFE391;
+  --OnWarningContainer: #876422;
+  --Positive: #5ebc62;
+  --OnPositive: #EDFFF0;
+  --PositiveContainer: #A4F5AB;
+  --OnPositiveContainer: #2c602a;
+
+  --Shadow-1: rgba(0, 0, 0, 0.04);
+  --Shadow-2: rgba(0, 0, 0, 0.08);
+  --Shadow-3: rgba(0, 0, 0, 0.12);
+  --Shadow-4: rgba(0, 0, 0, 0.16);
+}
+
+.scheme--dark {
+  --Ink: #ffffff;
+  --Base: #000000;
+  --Error: #DF1125;
+  --OnError: #FFF0F0;
+  --ErrorContainer: #F7B9BC;
+  --OnErrorContainer: #AF0C1F;
+  --Warning: #E6B644;
+  --OnWarning: #FFFDF2;
+  --WarningContainer: #FFE391;
+  --OnWarningContainer: #876422;
+  --Positive: #5ebc62;
+  --OnPositive: #EDFFF0;
+  --PositiveContainer: #A4F5AB;
+  --OnPositiveContainer: #2c602a;
+
+  --Shadow-1: rgba(0, 0, 0, 0.04);
+  --Shadow-2: rgba(0, 0, 0, 0.08);
+  --Shadow-3: rgba(0, 0, 0, 0.12);
+  --Shadow-4: rgba(0, 0, 0, 0.16);
+}
+
+::-moz-selection, ::selection {
+  color: var(--OnTertiary);
+  background: var(--Tertiary);
+}
+
+body {
+  background-color: var(--Background);
+  color: var(--OnSurface);
+}
+
+#browser-head-cover {
+  background-color: var(--Surface);
+}
+
+a {
+color: inherit;
+}
+
+* {
+  transition: background-color 200ms;
+  -webkit-transition: background-color 200ms;
+}

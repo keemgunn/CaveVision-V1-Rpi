@@ -1,0 +1,20 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["../client-server/env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.json", "src/**/*.yml", "src/**/*.md", "template"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "#/*": ["./template/*"]
+    },
+    "types": [
+      "@/**/types.ts",
+      "@/**/types-*.ts",
+      "@/**/__types.ts",
+      "./template/**/__types.ts",
+      "../common/types-*.ts",
+    ]
+  }
+}

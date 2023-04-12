@@ -1,0 +1,156 @@
+/* #/styles/typography/_mixins.scss */
+
+@mixin Typeface($family, $weight) {
+  font-family: $family;
+  font-weight: $weight;
+}
+
+@mixin FontSquare($size, $lineHeight, $negateString, $letterSpace) {
+  font-size: #{$size}rem;
+  letter-spacing: #{$negateString}#{calc($letterSpace * 0.01 * $size)}rem;
+  line-height: #{calc($lineHeight / $size)};
+}
+
+@mixin marginBlock($start, $end) {
+  margin-block-start: $start;
+  margin-block-end: $end;
+}
+
+@mixin noSelect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin SizeAdjust($origin, $var) {
+  #{$origin} {
+    font-size: $var
+  }
+}
+
+
+
+
+@mixin Header(
+  $param_famName, $family, 
+  $param_size, $size, 
+  $param_lineHeight, $lineHeight, 
+  $param_negateString, $negateString, 
+  $param_letterSpace, $letterSpace, 
+  $param_regular, $regular, 
+  $param_light, $light, 
+  $param_bold, $bold) {
+
+  .typo-header-#{$size}, .typo-header-#{$size}--light, .typo-header-#{$size}--bold {
+    @include Typeface($family, $regular);
+    @include FontSquare($size, $lineHeight, $negateString, $letterSpace);
+  }
+  .typo-header-#{$size} {
+    font-family: '#{$family} #{$regular}';
+  }
+  .typo-header-#{$size}.--light, 
+  .typo-header-#{$size}--light {
+    font-family: '#{$family} #{$light}';
+  }
+  .typo-header-#{$size}.--bold, 
+  .typo-header-#{$size}--bold {
+    font-family: '#{$family} #{$bold}';
+  }
+}
+
+
+
+@mixin Body(
+  $FAMILY, $family, 
+  $SIZE, $size, 
+  $LINE_HEIGHT, $lineHeight, 
+  $LETTERSPACE_SIGN, $negateString, 
+  $LETTERSPACE, $letterSpace, 
+  $REGULAR, $regular, 
+  $LIGHT, $light, 
+  $BOLD, $bold) {
+  .typo-body-#{$size}, .typo-body-#{$size}--light, .typo-body-#{$size}--bold {
+    @include Typeface($family, $regular);
+    @include FontSquare($size, $lineHeight, $negateString, $letterSpace);
+  }
+  .typo-body-#{$size} {
+    font-family: '#{$family} #{$regular}';
+  }
+  .typo-body-#{$size}.--light, 
+  .typo-body-#{$size}--light {
+    font-family: '#{$family} #{$light}';
+  }
+  .typo-body-#{$size}.--bold, 
+  .typo-body-#{$size}--bold {
+    font-family: '#{$family} #{$bold}';
+  }
+}
+
+
+
+@mixin Caption(
+  $FAMILY, $family, 
+  $SIZE, $size, 
+  $LINE_HEIGHT, $lineHeight, 
+  $LETTERSPACE_SIGN, $negateString, 
+  $LETTERSPACE, $letterSpace, 
+  $REGULAR, $regular, 
+  $LIGHT, $light, 
+  $BOLD, $bold) {
+  .typo-caption-#{$size}, .typo-caption-#{$size}--light, .typo-caption-#{$size}--bold {
+    @include Typeface($family, $regular);
+    @include FontSquare($size, $lineHeight, $negateString, $letterSpace);
+  }
+  .typo-caption-#{$size} {
+    font-family: '#{$family} #{$regular}';
+  }
+  .typo-caption-#{$size}.--light, 
+  .typo-caption-#{$size}--light {
+    font-family: '#{$family} #{$light}';
+  }
+  .typo-caption-#{$size}.--bold, 
+  .typo-caption-#{$size}--bold {
+    font-family: '#{$family} #{$bold}';
+  }
+}
+
+
+
+@mixin Mark(
+  $FAMILY, $family, 
+  $SIZE, $size, 
+  $LINE_HEIGHT, $lineHeight, 
+  $LETTERSPACE_SIGN, $negateString, 
+  $LETTERSPACE, $letterSpace, 
+  $REGULAR, $regular, 
+  $LIGHT, $light, 
+  $BOLD, $bold, 
+  $HEAVY, $heavy) {
+    
+  .typo-mark-#{$size}, .typo-mark-#{$size}--light, .typo-mark-#{$size}--bold, .typo-mark-#{$size}--heavy {
+    @include Typeface($family, $regular);
+    @include FontSquare($size, $lineHeight, $negateString, $letterSpace);
+  }
+  .typo-mark-#{$size} {
+    font-family: '#{$family} #{$regular}';
+  }
+  .typo-mark-#{$size}.--light, 
+  .typo-mark-#{$size}--light {
+    font-family: '#{$family} #{$light}';
+  }
+  .typo-mark-#{$size}.--bold, 
+  .typo-mark-#{$size}--bold {
+    font-family: '#{$family} #{$bold}';
+  }
+  .typo-mark-#{$size}.--heavy, 
+  .typo-mark-#{$size}--heavy {
+    font-family: '#{$family} #{$heavy}';
+  }
+}
+
+
+
+

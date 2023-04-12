@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: "JetbrainsMono";
+  src: url('/src/assets/font/JetbrainsMono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: "JetbrainsMono_Italic";
+  src: url('/src/assets/font/JetbrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@for $i from 20 through 90 {
+  @font-face {
+    font-family: "JetbrainsMono #{$i * 10}";
+    font-weight: #{$i * 10};
+    src: url('/src/assets/font/JetbrainsMono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: "JetbrainsMono-Italic #{$i * 10}";
+    font-weight: #{$i * 10};
+    src: url('/src/assets/font/JetbrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  }
+}
