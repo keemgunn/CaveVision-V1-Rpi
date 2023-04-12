@@ -6,14 +6,14 @@ export const FACE_OSC_WIDTH = 640;
 export const FACE_OSC_HEIGHT = 480;
 
 function handleMessagePack(address: string, messagePack: Array<string>) {
-    switch (address) {
+  switch (address) {
 
     case '/found':
       break;
 
     case '/pose/position':
       servoController.sendFacePosition(messagePack);
-      break;
+    break;
 
     default:
       break;
@@ -28,5 +28,10 @@ export function useFaceOSCstreamline(oscServer: Server) {
       const address = messagePack.splice(0, 1)[0];
       handleMessagePack(address, messagePack);
     })
+  })
+
+  oscServer.on('message', (msg) => {
+    console.log(`Message: ${msg}`);
+    const [address, ...args] = msg;
   })
 }
