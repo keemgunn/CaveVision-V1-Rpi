@@ -1,9 +1,9 @@
 import { Server } from "socket.io";
-import cv from "opencv4nodejs";
+import cv from "@u4/opencv4nodejs";
 
-const VIDEO_WIDTH = 300;
-const VIDEO_HEIGHT = 300;
-const FPS = 10;
+const VIDEO_WIDTH = 640;
+const VIDEO_HEIGHT = 480;
+const FPS = 30;
 
 const wCap = new cv.VideoCapture(0);
 wCap.set(cv.CAP_PROP_FRAME_WIDTH, VIDEO_WIDTH);
@@ -22,11 +22,10 @@ export function useNamespcae_stream(io: Server) {
     console.log("= socket/chat : A USER DISCONNECTED");
   })
   
-
   setInterval(() => {
     const frame = wCap.read();
     const image = cv.imencode('.jpg', frame).toString('base64');
-    io.emit('image', image);
+    currentIO.emit('image', image);
   }, 1000 / FPS);
 
 }

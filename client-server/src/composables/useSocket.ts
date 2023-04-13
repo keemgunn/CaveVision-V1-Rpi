@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { ref, onBeforeUnmount } from 'vue';
 import type { Ref } from 'vue';
 import { io, Socket } from 'socket.io-client';
+import { onMounted } from 'vue';
 // @ts-ignore: ITS OKAY.
 import projectConnectionConfigs from '@/../../configs/serverConnection.js';
 
@@ -56,11 +57,12 @@ export const useStreamSocket = defineStore('streamSocket', () => {
 
   const imageSrc = ref<string | undefined>(sampleImage);
 
-  socket.on("image", (image) => {
-    const imageEl = document.getElementById("straem-image") as HTMLImageElement;
-    imageSrc.value = `data:image/jpeg;base64,${image}`;
-  });
-
+  onMounted(() => {
+    socket.on("image", (image) => {
+      console.log("START LISTENING FOR SOCKET SERVER : 'image'");
+      imageSrc.value = `data:image/jpeg;base64,${image}`;
+    });
+  })
 
   return {
     socket,

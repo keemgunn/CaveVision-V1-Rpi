@@ -2,14 +2,14 @@
 import { ref } from 'vue';
 import { useStreamSocket } from '@/composables/useSocket';
 
-const { imageSrc } = useStreamSocket();
+const streamIO = useStreamSocket();
 </script>
 
 <template>
 <div id="router-page" class="home">
 
   <div class="stream-container">
-    <img id="stream-image" :src="imageSrc"/>
+    <img id="stream-image" :src="streamIO.imageSrc"/>
   </div>
 
 </div>

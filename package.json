@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "@types/node": "^18.15.11"
+  },
+  "scripts": {
+    "------ PROJECT ---------------": "",
+    "server": "cd ./client-server && npm run DEV_1 & cd ./controller-server && npm run NODEMON"
   }
 }
